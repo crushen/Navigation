@@ -23,6 +23,7 @@ nav {
   cursor: pointer;
   background: #3e3e3e;
   border-radius: 50px;
+  transition: 0.3s;
 }
 
 .burger-bar {
@@ -52,6 +53,10 @@ nav {
 
 .burger-bar::after {
   top: 10px;
+}
+
+.hamburger.active {
+  border-radius: 5px;
 }
 
 .hamburger.active .burger-bar {
