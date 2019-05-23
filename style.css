@@ -18,42 +18,53 @@ nav {
 }
 
 .hamburger {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
   background: #3e3e3e;
+  border-radius: 50px;
 }
 
 .burger-bar {
-  width: 50px;
-  height: 6px;
+  width: 30px;
+  height: 4px;
   background: #FFF;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .burger-bar:before,
 .burger-bar:after {
   content: '';
-  width: 50px;
-  height: 6px;
+  width: 30px;
+  height: 4px;
   background: #FFF;
   position: absolute;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
-.burger-bar:before {
-  top: -16px;
+.burger-bar::before {
+  top: -10px;
 }
 
-.burger-bar:after {
-  top: 16px;
+.burger-bar::after {
+  top: 10px;
+}
+
+.hamburger.active .burger-bar {
+  background: rgba(0,0,0,0);
+}
+
+.hamburger.active .burger-bar::before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.hamburger.active .burger-bar::after {
+  top: 0;
+  transform: rotate(45deg);
 }
 
