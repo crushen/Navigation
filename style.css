@@ -13,6 +13,8 @@ main {
 
 nav {
   font-weight: 500;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .navigation-list {
@@ -55,6 +57,10 @@ nav {
   text-decoration: none;
 }
 
+.navigation-list a:hover {
+  color: #82e3ff;
+}
+
 .hamburger {
   position: absolute;
   width: 60px;
@@ -95,7 +101,6 @@ nav {
   top: 10px;
 }
 
-/* .active class is given when clicked */
 .hamburger.active {
   border-radius: 5px;
 }
