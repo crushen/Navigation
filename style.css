@@ -20,13 +20,14 @@ nav {
 .navigation-list {
   width: 20px;
   height: 60px;
+  border-radius: 50px;
   list-style: none;
   text-align: center;
   font-size: 20px;
   background: #3e3e3e;
   margin: 0;
   transition: 0.3s;
-  border-radius: 50px;
+  transition-delay: 0.5s;
 }
 
 .navigation-list.active {
@@ -45,6 +46,7 @@ nav {
   visibility: hidden;
   opacity: 0;
   transition: 0.3s;
+  transition-delay: 0.3s;
 }
 
 .nav-links.active {
