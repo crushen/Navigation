@@ -1,21 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
 
 body {
-  margin: 1em;
+  margin: 0;
   padding: 0;
-  background: #82e3ff;
   overflow-x: hidden;
   font-family: 'Ubuntu', sans-serif;
 }
 
+header {
+  height: 100vH;
+  background: #82e3ff;
+}
+
 nav {
   font-weight: 400;
-  display: flex;
-  justify-content: flex-end;
+  padding: 2em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translate(-20px, 20px);
 }
 
 .hamburger {
   position: absolute;
+  top: 0;
+  right: 0;
   width: 60px;
   height: 60px;
   cursor: pointer;
@@ -73,6 +82,9 @@ nav {
 }
 
 .navigation-list {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 20px;
   height: 60px;
   border-radius: 50px;
@@ -82,7 +94,7 @@ nav {
   background: #3e3e3e;
   margin: 0;
   transition: 0.3s;
-  transition-delay: 0.5s;
+  transition-delay: 0.6s;
 }
 
 .navigation-list.active {
@@ -101,7 +113,7 @@ nav {
   visibility: hidden;
   opacity: 0;
   transition: 0.3s;
-  transition-delay: 0.5s;
+  transition-delay: 0.6s;
 }
 
 .nav-links.active {
@@ -117,4 +129,9 @@ nav {
 
 .navigation-list a:hover {
   color: #82e3ff;
+}
+
+section {
+  height: 100vH;
+  background-color: lightcoral;
 }
