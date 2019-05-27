@@ -29,6 +29,24 @@ header {
   background: #82e3ff;
 }
 
+section {
+  height: 100vH;
+}
+
+section:nth-child(odd) {
+  background-color: lightcoral;
+}
+
+section:nth-child(even) {
+  background-color: #82e3ff;
+}
+
+p {
+  text-align: center;
+  padding-top: 3em;
+  font-size: 2em;
+}
+
 nav {
   font-weight: 400;
   padding: 2em;
@@ -150,12 +168,17 @@ nav {
   color: #82e3ff;
 }
 
-section:nth-child(odd) {
-  height: 100vH;
-  background-color: lightcoral;
+#social-links {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+  font-size: 1.8em;
+  color: #FFF;
 }
 
-section:nth-child(even) {
-  height: 100vH;
-  background-color: #82e3ff;
+#social-links.active {
+  padding-top: 3em;
+  visibility: visible;
+  opacity: 1;
 }
+

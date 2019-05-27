@@ -2,6 +2,7 @@ const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.navigation-list');
 const navLinks = document.querySelectorAll('.nav-links');
 const overlay = document.querySelector('#overlay');
+const socialLinks = document.querySelector('#social-links');
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
@@ -9,6 +10,7 @@ hamburger.addEventListener('click', () => {
   for(let i = 0; i < navLinks.length; i++) {
     navLinks[i].classList.toggle('active');
   }
+  socialLinks.classList.toggle('active');
   overlay.classList.toggle('nav-is-active');
   if(overlay.classList.contains('nav-is-active')) {
     overlay.style.zIndex = '1';
@@ -25,5 +27,7 @@ navList.addEventListener('click', (event) => {
     for(let i = 0; i < navLinks.length; i++) {
       navLinks[i].classList.remove('active');
     }
+    socialLinks.classList.remove('active');
+    overlay.style.zIndex = '-1';
   }
 });
