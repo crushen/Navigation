@@ -4,13 +4,20 @@ const navLinks = document.querySelectorAll('.nav-links');
 const overlay = document.querySelector('#overlay');
 const socialLinks = document.querySelector('#social-links');
 
+function toggleActive(element) {
+  element.classList.toggle('active');
+}
+function removeActive(element) {
+  element.classList.remove('active');
+}
+
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navList.classList.toggle('active');
+  toggleActive(hamburger);
+  toggleActive(navList);
+  toggleActive(socialLinks);
   for(let i = 0; i < navLinks.length; i++) {
-    navLinks[i].classList.toggle('active');
+    toggleActive(navLinks[i]);
   }
-  socialLinks.classList.toggle('active');
   overlay.classList.toggle('nav-is-active');
   if(overlay.classList.contains('nav-is-active')) {
     overlay.style.zIndex = '1';
@@ -21,13 +28,14 @@ hamburger.addEventListener('click', () => {
 
 navList.addEventListener('click', (event) => {
   if(event.target.tagName === 'A') {
-    hamburger.classList.remove('active');
-    navList.classList.remove('active');
+    removeActive(hamburger);
+    removeActive(navList);
+    removeActive(socialLinks);
     overlay.classList.remove('nav-is-active');
     for(let i = 0; i < navLinks.length; i++) {
-      navLinks[i].classList.remove('active');
+      removeActive(navLinks[i]);
     }
-    socialLinks.classList.remove('active');
     overlay.style.zIndex = '-1';
   }
 });
+
