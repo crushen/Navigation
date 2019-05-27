@@ -112,11 +112,13 @@ nav {
 .hamburger.active .burger-bar::before {
   top: 0;
   transform: rotate(-45deg);
+  background: #e0e0e0;
 }
 
 .hamburger.active .burger-bar::after {
   top: 0;
   transform: rotate(45deg);
+  background: #e0e0e0;
 }
 
 .navigation-list {
@@ -143,8 +145,8 @@ nav {
   border-radius: 5px;
 }
 
-.navigation-list li {
-  padding: 10px;
+.navigation-list li:not(:first-child) {
+  padding-top: 2em;
 }
 
 .nav-links {
@@ -159,13 +161,14 @@ nav {
 }
 
 .navigation-list a {
-  color: #FFF;
+  color: #e0e0e0;
   text-decoration: none;
-  transition: 0.4s;
+  transition: visibility opacity 0.4s;
+  transition: color 0.2s;
 }
 
 .navigation-list a:hover {
-  color: #82e3ff;
+  color: #999aff;
 }
 
 #social-links {
@@ -177,8 +180,12 @@ nav {
 }
 
 #social-links.active {
-  padding-top: 3em;
+  padding-top: 2em;
   visibility: visible;
   opacity: 1;
+}
+
+.fab {
+  padding: 0 8px;
 }
 
