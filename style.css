@@ -112,13 +112,11 @@ nav {
 .hamburger.active .burger-bar::before {
   top: 0;
   transform: rotate(-45deg);
-  background: #e0e0e0;
 }
 
 .hamburger.active .burger-bar::after {
   top: 0;
   transform: rotate(45deg);
-  background: #e0e0e0;
 }
 
 .navigation-list {
@@ -138,8 +136,8 @@ nav {
 }
 
 .navigation-list.active {
-  width: 275px;
-  height: 350px;
+  width: 300px;
+  height: 400px;
   padding-top: 5em;
   padding-left: 0;
   border-radius: 5px;
@@ -161,7 +159,7 @@ nav {
 }
 
 .navigation-list a {
-  color: #e0e0e0;
+  color: #FFF;
   text-decoration: none;
   transition: visibility opacity 0.4s;
   transition: color 0.2s;
@@ -176,11 +174,10 @@ nav {
   opacity: 0;
   transition: 0.2s;
   font-size: 1.8em;
-  color: #FFF;
 }
 
 #social-links.active {
-  padding-top: 2em;
+  padding-top: 3em;
   visibility: visible;
   opacity: 1;
 }
@@ -189,3 +186,30 @@ nav {
   padding: 0 8px;
 }
 
+@media only screen and (max-width: 769px) {
+  .navigation-list.active {
+    width: 92vw;
+    height: 84vh;
+  }
+  .navigation-list li {
+    font-size: 22px;
+    padding-top: 3em;
+  }
+  #social-links.active {
+    padding-top: 6em;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .navigation-list.active {
+    width: 90vw;
+    height: 82vh;
+  }
+  .navigation-list li {
+    font-size: 22px;
+    padding-top: 3em;
+  }
+  #social-links.active {
+    padding-top: 6em;
+  }
+}
